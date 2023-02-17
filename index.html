@@ -1,24 +1,32 @@
 <!-- browser-sync start --server --directory --files "*"
 https://jsfiddle.net
 https://caniuse.com/
+
+DIV = block-level content
+SPAN = inline content
+
 -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Coursera!</title>
-</head>
-<body>
-<h1>Hello Coursera!</h1>
-<footer>
-    <hr>
-    <p style="text-align: center;"
-       onclick="alert('EMAILING US IS USELESS');">
-       hi
-    </p>
-</footer>
-</body>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Charsets are not fonts.</title>
+    </head>
+    <body>
+        <div>*** DIV 1: ASDFN ***</div>
+        <div>*** DIV 2: GDEFN ***</div>
+        <span>***SPAN 1: AUSDFSUJHEGB***</span>
+        <div>
+            *** DIV 3: AFTER SPAN 1
+            <span>
+                *** SPAN 2: IN DIV 3***
+                <span>
+                    {This is now a span in a span}
+                </span>
+                HEY!
+            </span>
+            ***WE BACK IN DIV 3***
+        </div>
+    </body>
 </html>
