@@ -5,28 +5,42 @@ https://caniuse.com/
 DIV = block-level content
 SPAN = inline content
 
+https://validator.w3.org/
+
+Entity References:
+Instead of < use "&lt;"
+Instead of > use "&gt;"
+Instead of & use "&amp;"
+For "" use &quot;
+
+use width and length to make load animation smoother.
 -->
 
 <!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Charsets are not fonts.</title>
+        <title>Shopping List</title>
     </head>
     <body>
-        <div>*** DIV 1: ASDFN ***</div>
-        <div>*** DIV 2: GDEFN ***</div>
-        <span>***SPAN 1: AUSDFSUJHEGB***</span>
+        <h1>Unordered List</h1>
+        <a href="#cookies">Click me to navigate to cookies.</a>
+        <div></div>
+        <a href="index2.html" target="_blank">
+            Wanna know something about me?
+        </a>
         <div>
-            *** DIV 3: AFTER SPAN 1
-            <span>
-                *** SPAN 2: IN DIV 3***
-                <span>
-                    {This is now a span in a span}
-                </span>
-                HEY!
-            </span>
-            ***WE BACK IN DIV 3***
+            <ol>
+                <li>Milk</li>
+                <li>Cookies</li>
+                <li>Milk
+                <ol>
+                <li>Cookies</li>
+                <li>Milk</li>
+                </ol>
+                </li>
+                <li id="cookies">Cookies</li>
+            </ol>
         </div>
     </body>
 </html>
