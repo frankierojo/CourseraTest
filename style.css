@@ -1,0 +1,60 @@
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: rgb(255, 255, 255);
+                margin: 0;
+                padding: 0;
+            }
+
+            body li {
+                list-style: none;
+                margin: auto;
+            }
+
+            section div:nth-child(odd) {
+                background-color: grey;
+            }
+
+            section div:nth-child(4):hover {
+                background-color: aqua;
+                width: fit-content;
+            }
+
+            a:link, a:visited {
+                text-decoration: none;
+                writing-mode:sideways-rl;
+                border: 1px solid blue;
+                width: 650px;
+                margin-bottom: 1px;
+                display: block;
+                text-align: center;
+            }
+            span a:hover, span a:active {
+                background-color: red;
+                color: purple;
+            }
+
+            body:nth-child(2) {
+                font-size: 40px;
+            }
+            ol {
+                font-size: 20px;
+                width: fit-content;
+                color: blue;
+            }
+            h1 {
+                font-size: 100px;
+                width: fit-content;
+                color:brown;
+                
+            }
+
+            section div:nth-child(7) {
+                margin-top: 5000px;
+            }
+
+            .custom_list_item {
+                display:inline-block
+            }
+
+            a.red {color: purple}
+            #brown {color: brown}

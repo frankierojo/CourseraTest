@@ -3,7 +3,11 @@ https://jsfiddle.net
 https://caniuse.com/
 
 DIV = block-level content
-SPAN = inline content
+SPAN = inline content (will not include the width of the entire browser, just the space that the text fills up)
+
+link styles with style.css external file ~ <link rel="stylesheet" href="style.css">
+
+ol -> li -> ul
 
 https://validator.w3.org/
 
@@ -14,95 +18,42 @@ Instead of & use "&amp;"
 For "" use &quot;
 For Non-breaking Space use "&nbsp;"
 
+For classes use .
+For ID use #
+
 use width and length to make load animation smoother.
 -->
 
 <!doctype html>
 <html lang="en">
     <head>
-
-        <meta charset="utf-8">
+    <meta charset="utf-8">
         <title>Shopping List</title>
-        <style>
-            body li {
-                list-style: none;
-                margin-left: -40px;
-            }
-
-            body ol {
-                list-style: none;
-                margin-left: -30px;
-            }
-
-            body ol:nth-child(3) {
-                font-size: 40px;
-            }
-
-            section div:nth-child(odd) {
-                background-color: grey;
-                width: 80px;
-            }
-
-            section div:nth-child(4):hover {
-                background-color: aqua;
-                width: 140px;
-            }
-            
-
-            a:link, a:visited {
-                text-decoration: none;
-                writing-mode:sideways-rl;
-                border: 1px solid blue;
-                width: 650px;
-                margin-bottom: 1px;
-                display: block;
-                text-align: center;
-            }
-            li:hover, li:active {
-                background-color: red;
-                color: purple;
-                width: 651px;
-            }
-
-            body:nth-child(2) {
-                font-size: 40px;
-            }
-            ol {
-                font-size: 20px;
-                width: 200px;
-                color: blue;
-            }
-            h1 {
-                font-size: 100px;
-                width: 200px;
-                color:brown;
-            }
-            a.red {color: purple}
-            #brown {color: brown}
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
-
     <body>
-        <h1>I&nbsp;love&nbsp;Belen!!!!</h1>
-        <ul>
-            <li>
-                <a href="#brown">Click&nbsp;me&nbsp;to&nbsp;navigate&nbsp;to&nbsp;cookies.</a>
-                </li>
-                <li>
-                <a href="index2.html" class="red" target="_blank"> <!-- _blank creates a new tab -->
-                    Wanna&nbsp;know&nbsp;something&nbsp;about&nbsp;me?
+        <h1>Welcome&nbsp;to
+            <span style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: rgb(228, 73, 73);">the future.</span>
+        </h1>
+            <span>
+                <a href="#brown" style="margin: auto;">Click&nbsp;me&nbsp;to&nbsp;navigate&nbsp;to&nbsp;bottom.</a>
+            </span>
+            <span>
+                <a href="index2.html" class="red" target="_blank" style="margin: auto;"> <!-- _blank creates a new tab -->
+                        Wanna&nbsp;know&nbsp;something&nbsp;about&nbsp;me?
                 </a>
-            </li>
-        </ul>
-
+            </span>
+            <br>
         <section>
             <div>Milk</div>
             <div>Cookies</div>
             <div>Milk</div>
-            <div>Cookies</div>
+            <div class="custom_list_item">Cookies</div>
             <div>Milk</div>
             <div>Cookies</div>
-            <div id="brown">Milk</div>
+            <div id="brown">Bottom</div>
+            <br>
+            <a href="#top"> Back to top</a>
         </section>
     </body>
 </html>
