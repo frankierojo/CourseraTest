@@ -12,35 +12,97 @@ Instead of < use "&lt;"
 Instead of > use "&gt;"
 Instead of & use "&amp;"
 For "" use &quot;
+For Non-breaking Space use "&nbsp;"
 
 use width and length to make load animation smoother.
 -->
 
 <!doctype html>
-<html>
+<html lang="en">
     <head>
+
         <meta charset="utf-8">
         <title>Shopping List</title>
+        <style>
+            body li {
+                list-style: none;
+                margin-left: -40px;
+            }
+
+            body ol {
+                list-style: none;
+                margin-left: -30px;
+            }
+
+            body ol:nth-child(3) {
+                font-size: 40px;
+            }
+
+            section div:nth-child(odd) {
+                background-color: grey;
+                width: 80px;
+            }
+
+            section div:nth-child(4):hover {
+                background-color: aqua;
+                width: 140px;
+            }
+            
+
+            a:link, a:visited {
+                text-decoration: none;
+                writing-mode:sideways-rl;
+                border: 1px solid blue;
+                width: 650px;
+                margin-bottom: 1px;
+                display: block;
+                text-align: center;
+            }
+            li:hover, li:active {
+                background-color: red;
+                color: purple;
+                width: 651px;
+            }
+
+            body:nth-child(2) {
+                font-size: 40px;
+            }
+            ol {
+                font-size: 20px;
+                width: 200px;
+                color: blue;
+            }
+            h1 {
+                font-size: 100px;
+                width: 200px;
+                color:brown;
+            }
+            a.red {color: purple}
+            #brown {color: brown}
+        </style>
     </head>
+
     <body>
-        <h1>Unordered List</h1>
-        <a href="#cookies">Click me to navigate to cookies.</a>
-        <div></div>
-        <a href="index2.html" target="_blank">
-            Wanna know something about me?
-        </a>
-        <div>
-            <ol>
-                <li>Milk</li>
-                <li>Cookies</li>
-                <li>Milk
-                <ol>
-                <li>Cookies</li>
-                <li>Milk</li>
-                </ol>
+        <h1>I&nbsp;love&nbsp;Belen!!!!</h1>
+        <ul>
+            <li>
+                <a href="#brown">Click&nbsp;me&nbsp;to&nbsp;navigate&nbsp;to&nbsp;cookies.</a>
                 </li>
-                <li id="cookies">Cookies</li>
-            </ol>
-        </div>
+                <li>
+                <a href="index2.html" class="red" target="_blank"> <!-- _blank creates a new tab -->
+                    Wanna&nbsp;know&nbsp;something&nbsp;about&nbsp;me?
+                </a>
+            </li>
+        </ul>
+
+        <section>
+            <div>Milk</div>
+            <div>Cookies</div>
+            <div>Milk</div>
+            <div>Cookies</div>
+            <div>Milk</div>
+            <div>Cookies</div>
+            <div id="brown">Milk</div>
+        </section>
     </body>
 </html>
